@@ -1,6 +1,6 @@
-<a class="item">
-    Message room
-  </a>
+
+  <%= link_to 'MessageRoom', root_path, class:"item" %>
+
   <a class="item">
     Messages
   </a>
@@ -9,11 +9,12 @@
       Account <i class="dropdown icon"></i>
       <div class="menu">
         <a class="item">Log out</a>
-        <a class="item">Log in</a>
+             
+        <%= link_to 'Login', login_path, class:"item" %>
         <a class="item">Sign up</a>
       </div>
     </div>
     <div class="item">
-        <div class="ui primary button">Sign Up</div>
+        <div class="ui red button">Sign Up</div>
     </div>
     </div>

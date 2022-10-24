@@ -26,6 +26,7 @@ class MessagesController < ApplicationController
 
     respond_to do |format|
       if @message.save
+        flash[:notice] = "Message was created"
         format.html { redirect_to message_url(@message), notice: "Message was successfully created." }
         format.json { render :show, status: :created, location: @message }
       else
@@ -39,6 +40,7 @@ class MessagesController < ApplicationController
   def update
     respond_to do |format|
       if @message.update(message_params)
+        flash[:notice] = "Message updates"
         format.html { redirect_to message_url(@message), notice: "Message was successfully updated." }
         format.json { render :show, status: :ok, location: @message }
       else
